@@ -1,0 +1,34 @@
+spring:
+  security:
+    basic:
+      enabled: false
+  application:
+    name : aquila-shipyard
+  data:
+    mongodb:
+#      host: ${MONGO_HOST}
+#      port: ${MONGO_PORT}
+#      username: ${MONGO_USER}
+#      password: ${MONGO_PWD}
+#      database: ${MONGO_DATABASE}
+      host: localhost
+      port: 27017
+      username: aquila_super_user
+      password: aquila_super_pwd@123
+      database: db
+      authentication-database: admin
+
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: 'true'
+    path: /apis-docs
+
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
